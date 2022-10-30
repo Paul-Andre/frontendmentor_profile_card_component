@@ -33,6 +33,15 @@
 
 body {
   background-color: var(--dark_cyan);
+  background-image:
+    url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    no-repeat,
+    no-repeat;
 }
 
 .attribution {
@@ -42,28 +51,43 @@ body {
   right: 0px;
 }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
 .card {
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: var(--white);
   background-image: url("images/bg-pattern-card.svg");
-  background-repeat: no-repeat, no-repeat;
-  box-shadow: 0px 25px 25px 0px rgba(0,0,0,4.77%);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 25px 75px 0px rgba(0,0,0,30%);
 
   color: var(--grayish_blue);
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
+  text-align: center;
 
-  margin: 0;
-  width: 350px;
   height: 374px;
   position: absolute;
-  text-align: center;
+}
+
+.card {
+  left: 24px;
+  right: 24px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
+}
+
+@media only screen and (min-width: 398px /* 24+350+24 */) {
+  .card {
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .card img.avatar {
+  box-sizing: content-box;
   border-radius: 50%;
   border: solid 5px white;
 
@@ -89,7 +113,7 @@ body {
 }
 
 .card section.middle {
-  top: 200px;
+  top: 212px;
   position: absolute;
   width: 100%;
   font-size: 18px;
@@ -111,8 +135,8 @@ body {
 .card section.middle .location{
   color: var(--dark_gray);
   font-weight: 400;
-  margin-top: 0.5em;
-  font-size: 16px;
+  margin-top: 8px;
+  font-size: 14px;
 }
 
 .card section.bottom {
@@ -124,7 +148,7 @@ body {
 }
 
 .card section.bottom .stats_container {
-  margin: 20px;
+  margin: 24px 24px;
   position: relative;
   height: auto;
   bottom: 0;
@@ -144,7 +168,7 @@ body {
 
 .stat .label {
   font-weight: 400;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--dark_grayish_blue);
   margin-top: 5px;
   letter-spacing: 0.15em;
