@@ -72,6 +72,7 @@ body {
   transform: translate(0, -50%);
 }
 
+/* When the screen is */
 @media only screen and (min-width: 398px /* 24+350+24 */) {
   .card {
     width: 350px;
@@ -97,24 +98,12 @@ body {
   position: relative;
 
 }
-.card h1 {
-  color: var(--dark_blue);
-  font-weight: 900;
-  font-size: 22px;
-  margin-top: 24px;
-  margin-bottom: 16px;
-}
-.card p {
-  margin: 1em;
-}
 
 .card section.middle {
   top: 212px;
   position: absolute;
   width: 100%;
   font-size: 18px;
-  
-
 }
 
 .card section.middle .name{
@@ -170,71 +159,57 @@ body {
   letter-spacing: 0.15em;
 }
 
-.block {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-}
     </style>
   </head>
   <body>
 
     <div class="card">
+
       <img class="avatar" src="images/image-victor.jpg" alt="Victor Crest's profile pic"></img>
 
-      <!--
-      <div class="block" style="background-color: var(--dark_cyan)" ></div>
-      <div class="block" style="background-color: var(--very_dark_desaturated_blue)" ></div>
-      <div class="block" style="background-color: var(--dark_grayish_blue)" ></div>
-      <div class="block" style="background-color: var(--dark_gray)" ></div>
-      <div class="block" style="background-color: var(--light_gray)" ></div>
-      -->
-
-      </br>
-
-    <section class="middle"> 
-      <div>
-        <span class="name">
-          Victor Crest
-        </span>
-        
-        
-        <span class="age">
-        26
-        <span>
-      </div>
-      <div class="location">
-        London
-      </div>
-    </section>
-    <section class="bottom">
-      <div class="stats_container">
-
-        <div class="stat">
-          <div class="number">
-            80K
-          </div>
-          <div class="label">
-            Followers
-          </div>
-        </div><div class="stat">
-          <div class="number">
-            803K
-          </div>
-          <div class="label">
-            Likes
-          </div>
-        </div><div class="stat">
-          <div class="number">
-            1.4K
-          </div>
-          <div class="label">
-            Photos
-          </div>
+      <section class="middle"> 
+        <div>
+          <span class="name">
+            Victor Crest
+          </span>
+          <span class="age">
+            26
+            <span>
         </div>
-      </div>
-    </section>
+        <div class="location">
+          London
+        </div>
+      </section>
 
+      <section class="bottom">
+        <div class="stats_container">
+          <div class="stat">
+            <div class="number">
+              80K
+            </div>
+            <div class="label">
+              Followers
+            </div>
+
+          </div><div class="stat">
+            <div class="number">
+              803K
+            </div>
+            <div class="label">
+              Likes
+            </div>
+
+          </div><div class="stat">
+            <div class="number">
+              1.4K
+            </div>
+            <div class="label">
+              Photos
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
 
 
