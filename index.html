@@ -1,35 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <title>Profile card component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+
+    <style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root { 
+  --white: hsl(0, 0%, 100%);;
+  --dark_cyan: hsl(185, 75%, 39%);
+  --very_dark_desaturated_blue: hsl(229, 23%, 23%);
+  --dark_grayish_blue: hsl(227, 10%, 46%);
+  --dark_gray: hsl(0, 0%, 59%);
+  --light_gray: hsl(0, 0%, 90%);
+}
+
+body {
+  background-color: var(--dark_cyan);
+}
+
+.attribution {
+  font-size: 11px; text-align: center; 
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+.card {
+  border-radius: 20px;
+  background-color: var(--white);
+  background-image: url("images/bg-pattern-card.svg");
+  background-repeat: no-repeat, no-repeat;
+  box-shadow: 0px 25px 25px 0px rgba(0,0,0,4.77%);
+
+  color: var(--grayish_blue);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+
+  margin: 0;
+  width: 350px;
+  height: 374px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card img.avatar {
+  border-radius: 50%;
+  border: solid 5px white;
+
+  width: 96px;
+  height: 96px;
+  margin: 0;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  position: relative;
+
+}
+.card h1 {
+  color: var(--dark_blue);
+  font-weight: 900;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.card p {
+  margin: 1em;
+}
+
+.card section.middle {
+  top: 200px;
+  position: absolute;
+  width: 100%;
+  font-size: 18px;
   
-  <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+}
 
-  80K
-  Followers
+.card section.middle .name{
+  color: var(--very_dark_desaturated_blue);
+  font-weight: 700;
+}
 
-  803K
-  Likes
+.card section.middle .age{
+  color: var(--dark_grayish_blue);
+  font-weight: 400;
+  margin-left: 0.25em;
+}
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+.card section.middle .location{
+  color: var(--dark_gray);
+  font-weight: 400;
+  margin-top: 0.5em;
+  font-size: 16px;
+}
+
+.card section.bottom {
+  top: 285px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: solid 1px var(--light_gray);
+}
+
+.card section.bottom .stats_container {
+  margin: 20px;
+  position: relative;
+  height: auto;
+  bottom: 0;
+}
+
+.stats_container .stat {
+  width: 33.3%;
+  display: inline-block;
+}
+
+.stat .number {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--very_dark_desaturated_blue);
+
+}
+
+.stat .label {
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--dark_grayish_blue);
+  margin-top: 5px;
+  letter-spacing: 0.15em;
+}
+
+.block {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="card">
+      <img class="avatar" src="images/image-victor.jpg"></img>
+
+      <!--
+      <div class="block" style="background-color: var(--dark_cyan)" ></div>
+      <div class="block" style="background-color: var(--very_dark_desaturated_blue)" ></div>
+      <div class="block" style="background-color: var(--dark_grayish_blue)" ></div>
+      <div class="block" style="background-color: var(--dark_gray)" ></div>
+      <div class="block" style="background-color: var(--light_gray)" ></div>
+      -->
+
+      </br>
+
+    <section class="middle"> 
+      <div>
+        <span class="name">
+          Victor Crest
+        </span>
+        
+        
+        <span class="age">
+        26
+        <span>
+      </div>
+      <div class="location">
+        London
+      </div>
+    </section>
+    <section class="bottom">
+      <div class="stats_container">
+
+        <div class="stat">
+          <div class="number">
+            80K
+          </div>
+          <div class="label">
+            Followers
+          </div>
+        </div><div class="stat">
+          <div class="number">
+            803K
+          </div>
+          <div class="label">
+            Likes
+          </div>
+        </div><div class="stat">
+          <div class="number">
+            1.4K
+          </div>
+          <div class="label">
+            Photos
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Paul-Andre/">Paul-Andre Henegar</a>.
+    </div>
+  </body>
 </html>
