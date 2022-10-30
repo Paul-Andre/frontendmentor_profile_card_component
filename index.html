@@ -33,11 +33,10 @@
 
 body {
   background-color: var(--dark_cyan);
-  background-image: url("images/bg-pattern-top.svg"); /*, url("images/bg-pattern-bottom.svg");*/
+  background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position-x: left -150px;
-  background-position-y: top -400px;
-  background-size: calc(30% + 300px) 978px;
+  background-position-x: left calc(50% -  500px), left calc(50% + 300px);
+  background-position-y: top -513px, top -300px;
 }
 
 .attribution {
