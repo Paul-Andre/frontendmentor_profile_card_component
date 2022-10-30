@@ -28,20 +28,16 @@
   --very_dark_desaturated_blue: hsl(229, 23%, 23%);
   --dark_grayish_blue: hsl(227, 10%, 46%);
   --dark_gray: hsl(0, 0%, 59%);
-  --light_gray: hsl(0, 0%, 90%);
+  --light_gray: hsl(0, 0%, 92%);
 }
 
 body {
   background-color: var(--dark_cyan);
-  background-image:
-    url("images/bg-pattern-top.svg"),
-    url("images/bg-pattern-bottom.svg");
-  background-repeat:
-    no-repeat,
-    no-repeat;
-  background-position:
-    no-repeat,
-    no-repeat;
+  background-image: url("images/bg-pattern-top.svg"); /*, url("images/bg-pattern-bottom.svg");*/
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: left -150px;
+  background-position-y: top -400px;
+  background-size: calc(30% + 300px) 978px;
 }
 
 .attribution {
@@ -90,6 +86,7 @@ body {
   box-sizing: content-box;
   border-radius: 50%;
   border: solid 5px white;
+  background-color: white;
 
   width: 96px;
   height: 96px;
@@ -133,7 +130,7 @@ body {
 }
 
 .card section.middle .location{
-  color: var(--dark_gray);
+  color: var(--dark_grayish_blue);
   font-weight: 400;
   margin-top: 8px;
   font-size: 14px;
@@ -184,7 +181,7 @@ body {
   <body>
 
     <div class="card">
-      <img class="avatar" src="images/image-victor.jpg"></img>
+      <img class="avatar" src="images/image-victor.jpg" alt="Victor Crest's profile pic"></img>
 
       <!--
       <div class="block" style="background-color: var(--dark_cyan)" ></div>
